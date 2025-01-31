@@ -37,17 +37,18 @@ export const tertiaryButton = style([
 export const saveBar = style({
   display: "flex",
   flexDirection: "row",
+  justifyContent: "space-evenly",
   gap: "4px",
   padding: `0 ${vars.space[2]} ${vars.space[4]}`,
 
   "@media": {
     // Directly use the value of vars.breakpoints[4] (which should be "1024px")
     [`screen and (min-width: 1024px)`]: {
-      // Correct usage in media query
       gap: "12px",
       position: "relative",
-      paddingRight: "20%",
-      paddingLeft: "20%",
+      // paddingRight: "20%",
+      // paddingLeft: "0%",
+
       "::after": {
         content: '""',
         position: "absolute",

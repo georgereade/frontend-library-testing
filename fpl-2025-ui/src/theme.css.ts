@@ -1,4 +1,4 @@
-import { createTheme } from "@vanilla-extract/css";
+import { createTheme, createThemeContract } from "@vanilla-extract/css";
 import { em } from "polished";
 
 const blue = "#05f0ff";
@@ -184,5 +184,26 @@ export const [themeClass, vars] = createTheme({
     1: "90",
     2: "110",
     3: "120",
+  },
+});
+
+export const elementStatusContract = createThemeContract({
+  elementStatus: {
+    0: {
+      bg: "",
+      color: "",
+    },
+    25: {
+      bg: "",
+      color: "",
+    },
+    50: {
+      bg: "",
+      color: "",
+    },
+    75: {
+      bg: "",
+      color: "",
+    },
   },
 });
