@@ -3,32 +3,24 @@ import {
   Dialog,
   DialogTrigger,
   Heading,
-  Input,
-  Label,
   Modal,
-  TextField,
+  ModalOverlay,
 } from "react-aria-components";
+import * as styles from "./modal.css"; // Import Vanilla Extract styles
 
 const TestModal = () => {
   return (
     <DialogTrigger>
-      <Button>Sign up…</Button>
-      <Modal>
-        <Dialog>
-          <form>
-            <Heading slot="title">Sign up</Heading>
-            <TextField autoFocus>
-              <Label>First Name:</Label>
-              <Input />
-            </TextField>
-            <TextField>
-              <Label>Last Name:</Label>
-              <Input />
-            </TextField>
-            <Button slot="close">Submit</Button>
-          </form>
-        </Dialog>
-      </Modal>
+      <Button>Open modal</Button>
+      <ModalOverlay className={styles.overlay}>
+        <Modal className={styles.modal}>
+          <Dialog>
+            <Heading slot="title">Player</Heading>
+            <p>This is a modal with a custom modal overlay.</p>
+            <Button slot="close">Close</Button>
+          </Dialog>
+        </Modal>
+      </ModalOverlay>
     </DialogTrigger>
   );
 };
