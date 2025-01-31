@@ -4,6 +4,7 @@ import MyButton from "./components/Button/Button.tsx";
 
 import * as css from "./components/Button/button.css.ts";
 import Alert from "./components/Alert/Alert.tsx";
+import TestModal from "./components/Modal/Modal.tsx";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           </Alert>
         </div>
       </div>
+      <TestModal />
     </div>
   );
 }

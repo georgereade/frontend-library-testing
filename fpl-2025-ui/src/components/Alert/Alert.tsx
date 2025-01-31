@@ -4,7 +4,7 @@ import { vars } from "../../theme.css.ts";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
 
 interface IStyleProps {
-  copnr?: number;
+  copnr?: number | null;
   isInline?: boolean;
   type?: "default" | "error" | "news" | "info";
   textAlign?: "left" | "center";
