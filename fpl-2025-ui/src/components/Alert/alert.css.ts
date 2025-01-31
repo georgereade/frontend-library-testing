@@ -52,8 +52,3 @@ export const alert = recipe({
     },
   },
 });
-
-// copnr: {
-//   backgroundColor: vars.colors.elementStatus[copnr].bg,
-//   color: vars.colors.elementStatus[copnr].color,
-// },

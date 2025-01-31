@@ -14,11 +14,15 @@ interface IProps extends IStyleProps {
   children: React.ReactNode;
 }
 
-// const getElementStatusColors = (copnr: number | null) => {
-//   if (copnr === null) return {};
-//   const status = vars.colors.elementStatus[copnr]; // Direct cast to number
-//   return status ? { [bgColor]: status.bg, [textColor]: status.color } : {}; // Return empty object if copnr is invalid
-// };
+const getElementStatusColors = (copnr: number | null) => {
+  if (copnr === null || vars.colors.elementStatus[copnr] === undefined)
+    return {};
+
+  return {
+    [bgColor]: vars.colors.elementStatus[copnr].bg,
+    [textColor]: vars.colors.elementStatus[copnr].color,
+  };
+};
 
 const Alert: React.FC<IProps> = ({
   children,
@@ -31,21 +35,15 @@ const Alert: React.FC<IProps> = ({
     <div className={alertWrap}>
       <div
         className={alert({ type, textAlign, isInline })}
-        // style={assignInlineVars(getElementStatusColors(copnr))}
-        style={assignInlineVars({
-          ...(copnr !== null
-            ? {
-                [bgColor]:
-                  vars.colors.elementStatus[
-                    copnr as keyof typeof vars.colors.elementStatus
-                  ]?.bg,
-                [textColor]:
-                  vars.colors.elementStatus[
-                    copnr as keyof typeof vars.colors.elementStatus
-                  ]?.color,
-              }
-            : {}),
-        })}
+        style={assignInlineVars(getElementStatusColors(copnr))}
+        // style={assignInlineVars({
+        //   ...(copnr !== null
+        //     ? {
+        //         [bgColor]: vars.colors.elementStatus[copnr]?.bg,
+        //         [textColor]: vars.colors.elementStatus[copnr]?.color,
+        //       }
+        //     : {}),
+        // })}
       >
         <div>{children}</div>
       </div>

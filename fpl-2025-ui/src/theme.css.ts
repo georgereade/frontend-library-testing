@@ -73,7 +73,7 @@ export const [themeClass, vars] = createTheme({
         bg: "#ffe65b",
         color: offblack,
       },
-    },
+    } as Record<number, { bg: string; color: string }>,
     elementTypes: {
       1: {
         bg: yellow,
