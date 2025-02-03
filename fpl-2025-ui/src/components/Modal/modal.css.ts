@@ -1,5 +1,5 @@
 import { style, keyframes } from "@vanilla-extract/css";
-import { vars } from "../../theme.css";
+import { vars } from "../../theme.css.ts";
 
 // Keyframe Animations
 const modalBlur = keyframes({
@@ -44,9 +44,9 @@ export const modal = style({
   right: 0,
   width: "300px",
   margin: "25px",
-  backgroundColor: vars.colors.purple120, // Replace with a valid theme color
+  backgroundColor: vars.colors.lightPurple,
   outline: "none",
-  borderLeft: `1px solid ${vars.colors.outline}`, // Replace with a valid theme color
+  borderLeft: `1px solid ${vars.colors.outline}`,
   boxShadow: "-8px 0 20px rgba(0, 0, 0, 0.1)",
   color: vars.colors.onPrimary,
   padding: "8px",
@@ -60,4 +60,10 @@ export const modal = style({
       animation: `${modalSlide} 300ms reverse ease-in`,
     },
   },
+});
+
+export const button = style({
+  backgroundColor: vars.colors.primary,
+  color: vars.colors.onPrimary,
+  borderRadius: vars.radii[2],
 });

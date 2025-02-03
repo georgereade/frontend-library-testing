@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import { vars } from "../../theme.css";
+import { vars } from "../../theme.css.ts";
 
 export const primaryButton = style({
   display: "block",
@@ -42,12 +42,9 @@ export const saveBar = style({
   padding: `0 ${vars.space[2]} ${vars.space[4]}`,
 
   "@media": {
-    // Directly use the value of vars.breakpoints[4] (which should be "1024px")
-    [`screen and (min-width: 1024px)`]: {
+    [`screen and (min-width: ${vars.breakpoints[4]})`]: {
       gap: "12px",
       position: "relative",
-      // paddingRight: "20%",
-      // paddingLeft: "0%",
 
       "::after": {
         content: '""',

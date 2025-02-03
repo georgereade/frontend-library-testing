@@ -3,7 +3,7 @@ import {
   createThemeContract,
   createTheme,
 } from "@vanilla-extract/css";
-import { em } from "polished";
+// import { em } from "polished";
 
 const blue = "#05f0ff";
 const darkPink = "#e90052";
@@ -33,12 +33,12 @@ const purple80 = "#541E5D";
 const purple110 = "#28002B";
 
 const breakpoints = {
-  0: em("400px"),
-  1: em("610px"),
-  2: em("700px"),
-  3: em("900px"),
-  4: em("1024px"),
-  5: em("1220px"),
+  0: "400px",
+  1: "610px",
+  2: "700px",
+  3: "900px",
+  4: "1024px",
+  5: "1220px",
 };
 
 export const root = createGlobalTheme(":root", {

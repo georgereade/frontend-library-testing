@@ -6,14 +6,14 @@ import {
   Modal,
   ModalOverlay,
 } from "react-aria-components";
-import * as styles from "./modal.css"; // Import Vanilla Extract styles
+import * as styles from "./modal.css.ts";
 
 const PlayerModal = () => {
   return (
     <DialogTrigger>
-      <Button>Open modal</Button>
+      <Button className={styles.button}>Open modal</Button>
       <ModalOverlay className={styles.overlay}>
-        <Modal className={styles.modal}>
+        <Modal isDismissable className={styles.modal}>
           <Dialog>
             <Heading slot="title">Player</Heading>
             <p>This is a modal with a custom modal overlay.</p>

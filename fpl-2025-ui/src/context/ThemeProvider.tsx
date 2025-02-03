@@ -1,6 +1,5 @@
-// ThemeProvider.tsx
 import { ReactNode, useState } from "react";
-import { ThemeContext } from "./themeContext"; // Import the context
+import { ThemeContext } from "./themeContext";
 import { lightTheme, darkTheme } from "../theme.css";
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {

@@ -1,8 +1,7 @@
-import { Button } from "react-aria-components";
+import { Button as RacButton } from "react-aria-components";
 
 export interface IButtonStyledProps {
   isDisabled?: boolean;
-  fullwidth?: string;
   className: string;
   children?: React.ReactNode;
 }
@@ -15,23 +14,17 @@ interface IProps {
 
 type Props = IButtonStyledProps & IProps;
 
-const MyButton: React.FC<Props> = ({
+const Button: React.FC<Props> = ({
   children,
   className,
   type = "button",
-  fullwidth,
+
   onPress,
   ...rest
 }) => (
-  <Button
-    type={type}
-    onPress={onPress}
-    className={className}
-    fullwidth={fullwidth}
-    {...rest}
-  >
+  <RacButton type={type} onPress={onPress} className={className} {...rest}>
     {children}
-  </Button>
+  </RacButton>
 );
 
-export default MyButton;
+export default Button;

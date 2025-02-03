@@ -1,10 +1,10 @@
 import "./global.css.ts";
-import MyButton from "./components/Button/Button.tsx";
-import * as styles from "./components/Button/button.css.ts";
 import Alert from "./components/Alert/Alert.tsx";
 import PlayerModal from "./components/Modal/Modal.tsx";
 import { useTheme } from "./context/themeContext.ts";
 import { copnrRow } from "./global.css.ts";
+import Testings from "./components/Teststse/Testings.tsx";
+import TransferButtons from "./components/TransferButtons/TransferButtons.tsx";
 
 function App() {
   const { toggleTheme } = useTheme();
@@ -13,11 +13,8 @@ function App() {
     <div id="app">
       <button onClick={toggleTheme}>Switch Theme</button>
       <h3>Buttons</h3>
-      <div className={styles.saveBar}>
-        <MyButton className={styles.primaryButton}>Primary</MyButton>
-        <MyButton className={styles.secondaryButton}>Secondary</MyButton>
-        <MyButton className={styles.tertiaryButton}>Tertiary</MyButton>
-      </div>
+      <TransferButtons />
+      <Testings />
       <h3>Alerts</h3>
       <div>
         <Alert>Default</Alert>
