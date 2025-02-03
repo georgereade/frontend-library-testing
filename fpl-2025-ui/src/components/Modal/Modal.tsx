@@ -8,7 +8,7 @@ import {
 } from "react-aria-components";
 import * as styles from "./modal.css"; // Import Vanilla Extract styles
 
-const TestModal = () => {
+const PlayerModal = () => {
   return (
     <DialogTrigger>
       <Button>Open modal</Button>
@@ -25,4 +25,4 @@ const TestModal = () => {
   );
 };
 
-export default TestModal;
+export default PlayerModal;

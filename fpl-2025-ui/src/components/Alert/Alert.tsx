@@ -36,14 +36,6 @@ const Alert: React.FC<IProps> = ({
       <div
         className={alert({ type, textAlign, isInline })}
         style={assignInlineVars(getElementStatusColors(copnr))}
-        // style={assignInlineVars({
-        //   ...(copnr !== null
-        //     ? {
-        //         [bgColor]: vars.colors.elementStatus[copnr]?.bg,
-        //         [textColor]: vars.colors.elementStatus[copnr]?.color,
-        //       }
-        //     : {}),
-        // })}
       >
         <div>{children}</div>
       </div>

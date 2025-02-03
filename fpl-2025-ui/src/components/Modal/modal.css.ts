@@ -1,10 +1,9 @@
 import { style, keyframes } from "@vanilla-extract/css";
-import { vars } from "../../theme.css"; // Ensure you have a theme setup
+import { vars } from "../../theme.css";
 
 // Keyframe Animations
 const modalBlur = keyframes({
   from: {
-    background: vars.colors.offWhite,
     backdropFilter: "blur(0)",
   },
   to: {
@@ -25,7 +24,6 @@ const modalSlide = keyframes({
 export const overlay = style({
   position: "fixed",
   inset: 0,
-  background: vars.colors.offWhite,
   backdropFilter: "blur(2px)",
 
   selectors: {
@@ -45,10 +43,14 @@ export const modal = style({
   bottom: 0,
   right: 0,
   width: "300px",
-  background: vars.colors.white, // Replace with a valid theme color
+  margin: "25px",
+  backgroundColor: vars.colors.purple120, // Replace with a valid theme color
   outline: "none",
-  borderLeft: `1px solid ${vars.colors.lightPurple}`, // Replace with a valid theme color
+  borderLeft: `1px solid ${vars.colors.outline}`, // Replace with a valid theme color
   boxShadow: "-8px 0 20px rgba(0, 0, 0, 0.1)",
+  color: vars.colors.onPrimary,
+  padding: "8px",
+  borderRadius: vars.radii[2],
 
   selectors: {
     "&[data-entering]": {

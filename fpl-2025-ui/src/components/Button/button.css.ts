@@ -8,7 +8,7 @@ export const primaryButton = style({
   border: "0",
   borderRadius: vars.radii[0],
   backgroundImage: `linear-gradient(to right, ${vars.colors.fantasy}, ${vars.colors.lightBlue})`,
-  color: vars.colors.primary,
+  color: vars.colors.purple,
   fontFamily: vars.fonts.bold,
   fontSize: vars.fontSizes[0],
   boxShadow: `1px 1px 10px -4px rgba(0, 0, 0, 0.5)`,
@@ -28,7 +28,7 @@ export const tertiaryButton = style([
   primaryButton,
   {
     background: vars.colors.lightGrey,
-    color: "black",
+    color: vars.colors.purple,
     fontFamily: vars.fonts.regular,
     boxShadow: "0 1px 8px 0 rgba(black, 0.06)",
   },

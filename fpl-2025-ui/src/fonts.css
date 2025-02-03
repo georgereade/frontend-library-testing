@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "PremierSans-Light";
+  src: url("./fonts/PremierLeagueW01-Light.woff2") format("woff2"),
+    url("./fonts/PremierLeagueW01-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PremierSans-Regular";
+  src: url("./fonts/PremierLeagueW01-Regular.woff2") format("woff2"),
+    url("./fonts/PremierLeagueW01-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PremierSans-Bold";
+  src: url("./fonts/PremierLeagueW01-Bold.woff2") format("woff2"),
+    url("./fonts/PremierLeagueW01-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PremierSans-Italic";
+  src: url("./fonts/PremierLeagueW01-Italic.woff2") format("woff2"),
+    url("./fonts/PremierLeagueW01-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PremierSans-Bold-Italic";
+  src: url("./fonts/PremierLeagueW01-BoldItalic.woff2") format("woff2"),
+    url("./fonts/PremierLeagueW01-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BudBold";
+  src: url("./fonts/BudBold.ttf") format("truetype"),
+    url("./fonts/BudBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

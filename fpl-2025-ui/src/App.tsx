@@ -1,21 +1,24 @@
-import "./App.css";
-import { themeClass } from "./theme.css.ts";
+import "./global.css.ts";
 import MyButton from "./components/Button/Button.tsx";
-
-import * as css from "./components/Button/button.css.ts";
+import * as styles from "./components/Button/button.css.ts";
 import Alert from "./components/Alert/Alert.tsx";
-import TestModal from "./components/Modal/Modal.tsx";
+import PlayerModal from "./components/Modal/Modal.tsx";
+import { useTheme } from "./context/themeContext.ts";
+import { copnrRow } from "./global.css.ts";
 
 function App() {
+  const { toggleTheme } = useTheme();
+
   return (
-    <div className={themeClass}>
-      <h2>Buttons</h2>
-      <div className={css.saveBar}>
-        <MyButton className={css.primaryButton}>Primary</MyButton>
-        <MyButton className={css.secondaryButton}>Secondary</MyButton>
-        <MyButton className={css.tertiaryButton}>Tertiary</MyButton>
+    <div id="app">
+      <button onClick={toggleTheme}>Switch Theme</button>
+      <h3>Buttons</h3>
+      <div className={styles.saveBar}>
+        <MyButton className={styles.primaryButton}>Primary</MyButton>
+        <MyButton className={styles.secondaryButton}>Secondary</MyButton>
+        <MyButton className={styles.tertiaryButton}>Tertiary</MyButton>
       </div>
-      <h2>Alerts</h2>
+      <h3>Alerts</h3>
       <div>
         <Alert>Default</Alert>
         <Alert type="error" textAlign="left">
@@ -24,7 +27,7 @@ function App() {
         <Alert type="info">Info with isInline</Alert>
         <Alert isInline>Default with isInline</Alert>
         <h3>copnr styles</h3>
-        <div className="copnr-row">
+        <div className={copnrRow}>
           <Alert copnr={null}>Null</Alert>
           <Alert type="news" copnr={0}>
             0%
@@ -39,8 +42,8 @@ function App() {
             75%
           </Alert>
         </div>
+        <PlayerModal />
       </div>
-      <TestModal />
     </div>
   );
 }

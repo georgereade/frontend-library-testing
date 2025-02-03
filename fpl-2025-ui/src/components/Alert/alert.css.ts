@@ -30,7 +30,7 @@ export const alert = recipe({
   variants: {
     type: {
       default: {
-        backgroundColor: vars.colors.primary,
+        backgroundColor: vars.colors.purple,
         color: vars.colors.fantasy,
       },
       error: {
@@ -38,7 +38,7 @@ export const alert = recipe({
         color: "white",
       },
       info: {
-        backgroundColor: vars.colors.primary,
+        backgroundColor: vars.colors.purple,
         color: "white",
       },
       news: {},
