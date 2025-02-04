@@ -3,7 +3,7 @@ import Alert from "./components/Alert/Alert.tsx";
 import PlayerModal from "./components/Modal/Modal.tsx";
 import { useTheme } from "./context/themeContext.ts";
 import { copnrRow } from "./global.css.ts";
-import Testings from "./components/Teststse/Testings.tsx";
+// import Testings from "./components/Teststse/Testings.tsx";
 import TransferButtons from "./components/TransferButtons/TransferButtons.tsx";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <button onClick={toggleTheme}>Switch Theme</button>
       <h3>Buttons</h3>
       <TransferButtons />
-      <Testings />
+      {/* <Testings /> */}
       <h3>Alerts</h3>
       <div>
         <Alert>Default</Alert>

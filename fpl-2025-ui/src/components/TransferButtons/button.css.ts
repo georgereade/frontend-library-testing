@@ -42,7 +42,7 @@ export const saveBar = style({
   padding: `0 ${vars.space[2]} ${vars.space[4]}`,
 
   "@media": {
-    [`screen and (min-width: ${vars.breakpoints[4]})`]: {
+    [`screen and (min-width: 1024px)`]: {
       gap: "12px",
       position: "relative",
 
