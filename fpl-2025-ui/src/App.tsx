@@ -1,20 +1,16 @@
 import "./global.css.ts";
 import Alert from "./components/Alert/Alert.tsx";
 import PlayerModal from "./components/Modal/Modal.tsx";
-import { useTheme } from "./context/themeContext.ts";
 import { copnrRow } from "./global.css.ts";
-// import Testings from "./components/Teststse/Testings.tsx";
+import ThemeDropdown from "./components/ThemeDropdown/ThemeDropdown.tsx";
 import TransferButtons from "./components/TransferButtons/TransferButtons.tsx";
 
 function App() {
-  const { toggleTheme } = useTheme();
-
   return (
     <div id="app">
-      <button onClick={toggleTheme}>Switch Theme</button>
       <h3>Buttons</h3>
+      <ThemeDropdown />
       <TransferButtons />
-      {/* <Testings /> */}
       <h3>Alerts</h3>
       <div>
         <Alert>Default</Alert>

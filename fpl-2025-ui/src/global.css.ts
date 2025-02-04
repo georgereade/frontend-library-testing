@@ -4,6 +4,7 @@ import { vars } from "./theme.css";
 globalStyle(":root", {
   fontSynthesis: "none",
   textRendering: "optimizeLegibility",
+  background: vars.colors.bgColor,
 });
 
 globalStyle("body", {
@@ -16,7 +17,6 @@ globalStyle("#app", {
   minHeight: "100vh",
   height: "100%",
   width: "100vw",
-  background: vars.colors.bgColor,
   color: vars.colors.primary,
   placeItems: "center",
   display: "flex",

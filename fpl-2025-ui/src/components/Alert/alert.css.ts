@@ -8,8 +8,8 @@ export const alertWrap = style({
   textAlign: "center",
 
   "@media": {
-    // [`screen and (min-width: ${vars.breakpoints[3]})`]: {
-    [`screen and (min-width: 990px)`]: {
+    [`screen and (min-width: ${vars.breakpoints[3]})`]: {
+      // [`screen and (min-width: 990px)`]: {
       marginRight: 0,
       marginLeft: 0,
     },
