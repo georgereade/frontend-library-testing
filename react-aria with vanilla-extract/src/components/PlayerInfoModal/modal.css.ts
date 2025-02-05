@@ -35,6 +35,10 @@ globalKeyframes(modalSlideBottom, {
 
 // Overlay Styles
 export const overlay = style({
+  display: "flex",
+  justifyContent: "center",
+  zIndex: "100",
+  width: "100vw",
   position: "fixed",
   inset: 0,
   backdropFilter: "brightness(50%)",
@@ -51,8 +55,6 @@ export const overlay = style({
 // Modal Styles
 export const modal = style([
   {
-    display: "flex",
-    justifyContent: "center",
     position: "fixed",
     top: 0,
     bottom: 0,
@@ -60,7 +62,7 @@ export const modal = style([
     width: "95vw",
     marginTop: "40%",
     backgroundColor: vars.colors.bgColor,
-    color: vars.colors.primary,
+    color: vars.colors.onPrimaryContainer,
     borderTop: `1px ${vars.colors.primary} solid`,
     padding: "8px",
     borderRadius: vars.radii[2],
@@ -92,9 +94,34 @@ export const modal = style([
   },
 ]);
 
+export const dialog = style({
+  display: "flex",
+  flexDirection: "column",
+  height: "100%",
+  justifyContent: "flex-start",
+});
+
 export const button = style({
   backgroundColor: vars.colors.primary,
   color: vars.colors.onPrimary,
   borderRadius: vars.radii[2],
   fontSize: vars.fontSizes[1],
+});
+
+export const closeButton = style({
+  position: "absolute",
+  top: 0,
+  right: 0,
+  borderRadius: vars.radii[1],
+  padding: "2px",
+  margin: "2px",
+});
+
+export const buttonRow = style({
+  display: "flex",
+  flexDirection: "row",
+  width: "100%",
+  justifyContent: "space-around",
+  marginTop: "auto",
+  paddingBottom: "24px",
 });

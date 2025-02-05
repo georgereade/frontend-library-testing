@@ -3,18 +3,19 @@ import { vars } from "../../theme.css.ts";
 
 // Overlay Styles
 export const overlay = style({
-  display: "flex",
-  flexDirection: "column",
   color: vars.colors.primary,
-  backgroundColor: vars.colors.onPrimary,
   margin: "8px 0px",
   marginBottom: vars.space[4],
   borderRadius: vars.radii[1],
+  width: "90%",
+  display: "flex",
+  justifyContent: "flex-start",
 });
 
 export const boxes = style({
   color: vars.colors.onPrimaryContainer,
   backgroundColor: vars.colors.primaryContainer,
+  border: `1px solid ${vars.colors.onPrimaryContainer}`,
   borderRadius: vars.radii[1],
 });
 

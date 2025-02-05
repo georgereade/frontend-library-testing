@@ -8,8 +8,8 @@ import AlertDemos from "./components/AlertDemos/AlertDemos.tsx";
 function App() {
   return (
     <div id="app">
-      <h3>Buttons</h3>
       <ThemeDropdown />
+      <h3>Buttons</h3>
       <TransferButtons />
       <h3>Alerts</h3>
       <AlertDemos />
