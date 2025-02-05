@@ -8,10 +8,10 @@ import {
 } from "react-aria-components";
 import * as styles from "./modal.css.ts";
 
-const PlayerModal = () => {
+const PlayerInfoModal = () => {
   return (
     <DialogTrigger>
-      <Button className={styles.button}>Open modal</Button>
+      <Button className={styles.button}>Show Player Info</Button>
       <ModalOverlay className={styles.overlay}>
         <Modal isDismissable className={styles.modal}>
           <Dialog>
@@ -25,4 +25,4 @@ const PlayerModal = () => {
   );
 };
 
-export default PlayerModal;
+export default PlayerInfoModal;

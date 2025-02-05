@@ -24,6 +24,7 @@ export const item = style({
   justifyContent: "center",
   alignItems: "center",
   padding: "6px 0px",
+  cursor: "pointer",
 });
 
 export const icon = style({
@@ -38,6 +39,9 @@ export const button = style({
   backgroundColor: vars.colors.bgColor,
   color: vars.colors.primary,
   borderRadius: vars.radii[2],
+  borderColor: vars.colors.lightBlue,
+  border: "1px solid",
+  cursor: "pointer",
 });
 
 export const input = style({

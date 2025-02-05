@@ -1,4 +1,4 @@
-import { globalStyle, style } from "@vanilla-extract/css";
+import { globalStyle } from "@vanilla-extract/css";
 import { vars } from "./theme.css";
 
 globalStyle(":root", {
@@ -23,11 +23,4 @@ globalStyle("#app", {
   flexDirection: "column",
   justifyContent: "center",
   padding: "4px",
-});
-
-export const copnrRow = style({
-  display: "flex",
-  flexDirection: "row",
-  flexWrap: "wrap",
-  gap: "4px",
 });

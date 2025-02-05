@@ -1,4 +1,4 @@
-import * as styles from "./ThemeDropdown.css.ts";
+import * as styles from "./themeDropdown.css.ts";
 import {
   Button,
   ListBox,

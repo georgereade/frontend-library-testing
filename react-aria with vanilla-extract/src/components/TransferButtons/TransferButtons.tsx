@@ -1,4 +1,4 @@
-import * as styles from "./button.css";
+import * as styles from "./transferButtons.css";
 import Button from "../Button/Button";
 
 const TransferButtons = () => {
