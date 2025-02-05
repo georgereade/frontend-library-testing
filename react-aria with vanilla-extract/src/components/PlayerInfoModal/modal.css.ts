@@ -4,10 +4,10 @@ import { vars } from "../../theme.css.ts";
 // Keyframe Animations
 const modalBlur = keyframes({
   from: {
-    backdropFilter: "blur(0)",
+    backdropFilter: "brightness(100%)",
   },
   to: {
-    backdropFilter: "blur(3px)",
+    backdropFilter: "brightness(50%)",
   },
 });
 
@@ -37,7 +37,7 @@ globalKeyframes(modalSlideBottom, {
 export const overlay = style({
   position: "fixed",
   inset: 0,
-  backdropFilter: "blur(2px)",
+  backdropFilter: "brightness(50%)",
   selectors: {
     "&[data-entering]": {
       animation: `${modalBlur} 200ms`,
@@ -58,7 +58,7 @@ export const modal = style([
     bottom: 0,
     right: 0,
     width: "95vw",
-    marginTop: "50px",
+    marginTop: "40%",
     backgroundColor: vars.colors.bgColor,
     color: vars.colors.primary,
     borderTop: `1px ${vars.colors.primary} solid`,
@@ -75,10 +75,9 @@ export const modal = style([
     "@media": {
       [`screen and (min-width: 768px)`]: {
         width: "300px",
-        height: "100vh",
-        marginTop: "0",
-        marginRight: "25px",
-        borderTop: "none",
+        height: "90vh",
+        margin: "auto",
+        marginRight: "1%",
         borderLeft: `1px ${vars.colors.primary} solid`,
         selectors: {
           "&[data-entering]": {
