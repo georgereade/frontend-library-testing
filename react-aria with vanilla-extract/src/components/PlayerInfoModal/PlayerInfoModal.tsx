@@ -15,7 +15,7 @@ const PlayerInfoModal = () => {
       <ModalOverlay className={styles.overlay}>
         <Modal isDismissable className={styles.modal}>
           <Dialog>
-            <Heading slot="title">Player</Heading>
+            <Heading slot="title">Player Info</Heading>
             <p>This is a modal with a custom modal overlay.</p>
             <Button slot="close">Close</Button>
           </Dialog>

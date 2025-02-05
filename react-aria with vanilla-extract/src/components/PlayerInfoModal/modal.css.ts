@@ -15,7 +15,7 @@ const modalSlideRight = "modalSlideRight";
 
 globalKeyframes(modalSlideRight, {
   from: {
-    transform: "translateX(100%)",
+    transform: "translateX(110%)",
   },
   to: {
     transform: "translateX(0)",
@@ -26,7 +26,7 @@ const modalSlideBottom = "modalSlideBottom";
 
 globalKeyframes(modalSlideBottom, {
   from: {
-    transform: "translateY(100%)",
+    transform: "translateY(110%)",
   },
   to: {
     transform: "translateY(0)",
@@ -51,33 +51,41 @@ export const overlay = style({
 // Modal Styles
 export const modal = style([
   {
+    display: "flex",
+    justifyContent: "center",
     position: "fixed",
     top: 0,
     bottom: 0,
     right: 0,
-    width: "300px",
-    margin: "25px",
+    width: "95vw",
+    marginTop: "50px",
     backgroundColor: vars.colors.bgColor,
     color: vars.colors.primary,
-    outline: "none",
+    borderTop: `1px ${vars.colors.primary} solid`,
     padding: "8px",
     borderRadius: vars.radii[2],
     selectors: {
       "&[data-entering]": {
-        animation: `${modalSlideRight} 200ms`,
+        animation: `${modalSlideBottom} 200ms`,
       },
       "&[data-exiting]": {
-        animation: `${modalSlideRight} 200ms reverse ease-in`,
+        animation: `${modalSlideBottom} 200ms reverse ease-in`,
       },
     },
     "@media": {
-      [`screen and (max-width: 768px)`]: {
+      [`screen and (min-width: 768px)`]: {
+        width: "300px",
+        height: "100vh",
+        marginTop: "0",
+        marginRight: "25px",
+        borderTop: "none",
+        borderLeft: `1px ${vars.colors.primary} solid`,
         selectors: {
           "&[data-entering]": {
-            animation: `${modalSlideBottom} 200ms`,
+            animation: `${modalSlideRight} 200ms`,
           },
           "&[data-exiting]": {
-            animation: `${modalSlideBottom} 200ms reverse ease-in`,
+            animation: `${modalSlideRight} 200ms reverse ease-in`,
           },
         },
       },
@@ -89,4 +97,5 @@ export const button = style({
   backgroundColor: vars.colors.primary,
   color: vars.colors.onPrimary,
   borderRadius: vars.radii[2],
+  fontSize: vars.fontSizes[1],
 });

@@ -29,8 +29,9 @@ export const saveBar = style({
   flexDirection: "row",
   flexWrap: "wrap",
   justifyContent: "space-between",
-  gap: "4px",
   padding: `0 ${vars.space[2]} ${vars.space[4]}`,
+  gap: "4px",
+  maxWidth: "500px",
 
   "@media": {
     [`screen and (min-width: 1024px)`]: {

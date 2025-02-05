@@ -8,7 +8,7 @@ const AlertDemos = () => {
       <Alert type="error" textAlign="left">
         Error with textAlign left
       </Alert>
-      <Alert type="info">Info with isInline</Alert>
+      <Alert type="info">Info</Alert>
       <Alert isInline>Default with isInline</Alert>
       <h3>copnr styles</h3>
       <div className={copnrRow}>

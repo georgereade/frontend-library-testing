@@ -42,6 +42,7 @@ export const button = style({
   border: "1px solid",
   cursor: "pointer",
   borderRadius: vars.radii[1],
+  padding: "4px",
 });
 
 export const input = style({
