@@ -1,49 +1,46 @@
 import * as styles from "./ThemeDropdown.css.ts";
 import {
   Button,
-  ComboBox,
-  Input,
-  Label,
   ListBox,
   ListBoxItem,
   Popover,
+  Select,
+  SelectValue,
 } from "react-aria-components";
 import { useTheme } from "../../context/themeContext.ts";
+import { Moon, Sun } from "lucide-react";
 
-const themes = ["light", "dark"] as const;
+const themes = [
+  { id: 1, name: "light" },
+  { id: 2, name: "dark" },
+];
 
 const ThemeDropdown = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   return (
-    <ComboBox
+    <Select
       selectedKey={theme}
+      label="Select Theme"
       className={styles.overlay}
-      onSelectionChange={(newTheme: string | null) => {
-        if (newTheme && newTheme !== theme) {
-          toggleTheme();
-        }
-      }}
+      onSelectionChange={(newTheme: "light" | "dark") => setTheme(newTheme)}
+      defaultSelectedKey={theme}
     >
-      <Label>Select Theme</Label>
-      <div>
-        <Input
-          value={theme.charAt(0).toUpperCase() + theme.slice(1)}
-          readOnly
-          className={styles.input}
-        />
-        <Button>▼</Button>
-      </div>
+      <Button className={styles.button}>
+        <SelectValue>{theme === "light" ? <Sun /> : <Moon />}</SelectValue>
+        <span aria-hidden="true">▼</span>
+      </Button>
       <Popover className={styles.popover}>
-        <ListBox className={styles.boxes}>
-          {themes.map((t) => (
-            <ListBoxItem key={t}>
-              {t.charAt(0).toUpperCase() + t.slice(1)}
-            </ListBoxItem>
-          ))}
+        <ListBox className={styles.boxes} selectionMode="single" items={themes}>
+          <ListBoxItem id="light" className={styles.item}>
+            <Sun className={styles.icon} /> Light
+          </ListBoxItem>
+          <ListBoxItem id="dark" className={styles.item}>
+            <Moon className={styles.icon} /> Dark
+          </ListBoxItem>
         </ListBox>
       </Popover>
-    </ComboBox>
+    </Select>
   );
 };
 

@@ -7,7 +7,7 @@ const modalBlur = keyframes({
     backdropFilter: "blur(0)",
   },
   to: {
-    backdropFilter: "blur(2px)",
+    backdropFilter: "blur(3px)",
   },
 });
 
@@ -60,7 +60,6 @@ export const modal = style([
     backgroundColor: vars.colors.bgColor,
     color: vars.colors.primary,
     outline: "none",
-    borderLeft: `1px solid ${vars.colors.outline}`,
     padding: "8px",
     borderRadius: vars.radii[2],
     selectors: {

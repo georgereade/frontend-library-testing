@@ -1,6 +1,6 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { style, createVar } from "@vanilla-extract/css";
-import { vars } from "../../theme.css";
+import { vars } from "../../theme.css.ts";
 
 // AlertWrap
 export const alertWrap = style({
@@ -8,8 +8,8 @@ export const alertWrap = style({
   textAlign: "center",
 
   "@media": {
-    [`screen and (min-width: ${vars.breakpoints[3]})`]: {
-      // [`screen and (min-width: 990px)`]: {
+    // [`screen and (min-width: ${vars.breakpoints[3]})`]: {
+    [`screen and (min-width: 990px)`]: {
       marginRight: 0,
       marginLeft: 0,
     },
