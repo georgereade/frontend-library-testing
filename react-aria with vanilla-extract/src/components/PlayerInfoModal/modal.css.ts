@@ -99,6 +99,11 @@ export const dialog = style({
   flexDirection: "column",
   height: "100%",
   justifyContent: "flex-start",
+  selectors: {
+    "&:focus-visible": {
+      outline: "none",
+    },
+  },
 });
 
 export const button = style({

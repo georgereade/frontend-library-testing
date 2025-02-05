@@ -1,4 +1,4 @@
-import { globalStyle } from "@vanilla-extract/css";
+import { globalStyle, style } from "@vanilla-extract/css";
 import { vars } from "./theme.css";
 
 globalStyle(":root", {
@@ -23,4 +23,12 @@ globalStyle("#app", {
   flexDirection: "column",
   justifyContent: "center",
   padding: "4px",
+});
+
+export const disableFocusRing = style({
+  selectors: {
+    "&:focus-visible": {
+      outline: "none",
+    },
+  },
 });
