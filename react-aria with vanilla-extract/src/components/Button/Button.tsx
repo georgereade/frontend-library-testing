@@ -1,28 +1,34 @@
 import { Button as RacButton } from "react-aria-components";
+import { button } from "./button.css.ts";
 
 export interface IButtonStyledProps {
   isDisabled?: boolean;
-  className: string;
+  className?: string;
   children?: React.ReactNode;
 }
 
 interface IProps {
   onPress?: () => void;
   type?: "button" | "submit" | "reset";
-  width?: number;
+  fullWidth?: boolean;
 }
 
 type Props = IButtonStyledProps & IProps;
 
 const Button: React.FC<Props> = ({
   children,
-  className,
+  className = "",
   type = "button",
-
+  fullWidth = false,
   onPress,
   ...rest
 }) => (
-  <RacButton type={type} onPress={onPress} className={className} {...rest}>
+  <RacButton
+    type={type}
+    onPress={onPress}
+    className={`${button({ fullWidth })} ${className}`.trim()}
+    {...rest}
+  >
     {children}
   </RacButton>
 );

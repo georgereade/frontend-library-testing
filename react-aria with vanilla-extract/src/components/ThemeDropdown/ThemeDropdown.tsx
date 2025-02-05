@@ -25,6 +25,7 @@ const ThemeDropdown = () => {
       className={styles.overlay}
       onSelectionChange={(newTheme: "light" | "dark") => setTheme(newTheme)}
       defaultSelectedKey={theme}
+      aria-label="select-theme"
     >
       <Button className={styles.button}>
         <SelectValue>{theme === "light" ? <Sun /> : <Moon />}</SelectValue>
@@ -32,10 +33,10 @@ const ThemeDropdown = () => {
       </Button>
       <Popover className={styles.popover}>
         <ListBox className={styles.boxes} selectionMode="single" items={themes}>
-          <ListBoxItem id="light" className={styles.item}>
+          <ListBoxItem id="light" className={styles.item} aria-label="light">
             <Sun className={styles.icon} /> Light
           </ListBoxItem>
-          <ListBoxItem id="dark" className={styles.item}>
+          <ListBoxItem id="dark" className={styles.item} aria-label="dark">
             <Moon className={styles.icon} /> Dark
           </ListBoxItem>
         </ListBox>

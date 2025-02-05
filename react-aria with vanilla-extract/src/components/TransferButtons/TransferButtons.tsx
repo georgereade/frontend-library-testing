@@ -4,9 +4,11 @@ import Button from "../Button/Button";
 const TransferButtons = () => {
   return (
     <div className={styles.saveBar}>
-      <Button className={styles.primaryButton}>Primary</Button>
-      <Button className={styles.secondaryButton}>Secondary</Button>
-      <Button className={styles.tertiaryButton}>Tertiary</Button>
+      <Button className={styles.primaryButton} fullWidth>
+        Auto Pick
+      </Button>
+      <Button className={styles.secondaryButton}>Reset</Button>
+      <Button className={styles.tertiaryButton}>Make Transfers</Button>
     </div>
   );
 };

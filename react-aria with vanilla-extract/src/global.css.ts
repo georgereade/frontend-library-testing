@@ -5,12 +5,12 @@ globalStyle(":root", {
   fontSynthesis: "none",
   textRendering: "optimizeLegibility",
   background: vars.colors.bgColor,
+  fontFamily: vars.fonts.regular,
 });
 
 globalStyle("body", {
   overflowX: "hidden",
   margin: 0,
-  fontFamily: vars.fonts.regular,
 });
 
 globalStyle("#app", {

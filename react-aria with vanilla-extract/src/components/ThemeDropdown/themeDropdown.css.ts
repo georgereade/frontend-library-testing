@@ -9,13 +9,13 @@ export const overlay = style({
   backgroundColor: vars.colors.onPrimary,
   margin: "8px 0px",
   marginBottom: vars.space[4],
-  borderRadius: vars.radii[2],
+  borderRadius: vars.radii[1],
 });
 
 export const boxes = style({
   color: vars.colors.onPrimaryContainer,
   backgroundColor: vars.colors.primaryContainer,
-  borderRadius: vars.radii[2],
+  borderRadius: vars.radii[1],
 });
 
 export const item = style({
@@ -38,10 +38,10 @@ export const button = style({
   alignItems: "center",
   backgroundColor: vars.colors.bgColor,
   color: vars.colors.primary,
-  borderRadius: vars.radii[2],
   borderColor: vars.colors.lightBlue,
   border: "1px solid",
   cursor: "pointer",
+  borderRadius: vars.radii[1],
 });
 
 export const input = style({
@@ -50,7 +50,6 @@ export const input = style({
   color: vars.colors.onPrimaryContainer,
   backgroundColor: vars.colors.primaryContainer,
   border: `1px solid ${vars.colors.fantasy}`,
-  borderRadius: "6px",
   padding: "0.286rem 2rem 0.286rem 0.571rem",
   verticalAlign: "middle",
 });
@@ -73,7 +72,6 @@ globalStyle(`${popover} .react-aria-ListBox .react-aria-Header`, {
 
 globalStyle(`${popover} .react-aria-ListBoxItem`, {
   padding: "0.286rem 0.571rem 0.286rem 1.571rem",
-  borderRadius: vars.radii[2],
 });
 
 globalStyle(`${popover} .react-aria-ListBoxItem[data-focus-visible]`, {
