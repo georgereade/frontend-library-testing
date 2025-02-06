@@ -13,7 +13,7 @@ interface IProps {
   type?: "button" | "submit" | "reset";
   fullWidth?: boolean;
   transfer?: boolean;
-  buttonVariant?: "primary" | "secondary" | "tertiary" | "filled" | "empty";
+  variant?: "primary" | "secondary" | "tertiary" | "filled" | "ghost";
 }
 
 type Props = IButtonStyledProps & IProps;
@@ -23,7 +23,7 @@ const Button: React.FC<Props> = ({
   className = "",
   type = "button",
   fullWidth = false,
-  buttonVariant,
+  variant,
   transfer = false,
   onPress,
   ...rest
@@ -33,7 +33,7 @@ const Button: React.FC<Props> = ({
     onPress={onPress}
     className={`${button({
       fullWidth,
-      buttonVariant,
+      variant,
       transfer,
     })} ${className}`.trim()}
     {...rest}

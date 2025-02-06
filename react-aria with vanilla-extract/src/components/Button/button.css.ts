@@ -20,7 +20,7 @@ export const button = recipe({
         width: "auto",
       },
     },
-    buttonVariant: {
+    variant: {
       primary: {
         backgroundImage: `linear-gradient(to right, ${vars.colors.fantasy}, ${vars.colors.lightBlue})`,
         color: vars.colors.purple,
@@ -41,7 +41,7 @@ export const button = recipe({
         borderRadius: vars.radii[4],
         padding: vars.space[2],
       },
-      empty: {
+      ghost: {
         background: vars.colors.bgColor,
         color: vars.colors.primary,
         borderRadius: vars.radii[4],

@@ -28,10 +28,10 @@ const PlayerInfoModal = () => {
             <p>This is a modal with a custom modal overlay.</p>
             <PositionSelector />
             <div className={styles.buttonRow}>
-              <Button buttonVariant={"filled"} fullWidth>
+              <Button variant={"filled"} fullWidth>
                 Full Profile
               </Button>
-              <Button buttonVariant={"empty"} fullWidth>
+              <Button variant={"ghost"} fullWidth>
                 Substitute
               </Button>
             </div>
