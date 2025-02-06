@@ -1,29 +1,6 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "../../theme.css.ts";
 
-export const primaryButton = style({
-  backgroundImage: `linear-gradient(to right, ${vars.colors.fantasy}, ${vars.colors.lightBlue})`,
-  color: vars.colors.purple,
-  boxShadow: `1px 1px 10px -4px rgba(0, 0, 0, 0.5)`,
-});
-
-export const secondaryButton = style([
-  primaryButton,
-  {
-    background: vars.colors.lightPurple,
-    color: "white",
-    boxShadow: "0 1px 8px 0 rgba(0, 0, 0, 0.06)",
-  },
-]);
-
-export const tertiaryButton = style([
-  primaryButton,
-  {
-    background: vars.colors.lightGrey,
-    color: vars.colors.purple,
-  },
-]);
-
 export const saveBar = style({
   display: "flex",
   flexDirection: "row",

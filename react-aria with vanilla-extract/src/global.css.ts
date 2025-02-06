@@ -22,13 +22,33 @@ globalStyle("#app", {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  padding: "4px",
 });
 
 export const disableFocusRing = style({
   selectors: {
     "&:focus-visible": {
       outline: "none",
+    },
+  },
+});
+
+export const appRow = style({
+  display: "flex",
+  flexDirection: "row",
+  flexWrap: "wrap",
+  width: "100vw",
+  justifyContent: "space-evenly",
+  padding: `${vars.space[3]} 0`,
+});
+
+export const appColumn = style({
+  display: "flex",
+  flexDirection: "column",
+  flex: "0 1 40%",
+
+  "@media": {
+    [`screen and (max-width: 768px)`]: {
+      flexBasis: "90%",
     },
   },
 });

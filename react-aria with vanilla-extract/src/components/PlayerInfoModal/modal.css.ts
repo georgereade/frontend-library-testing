@@ -106,13 +106,6 @@ export const dialog = style({
   },
 });
 
-export const button = style({
-  backgroundColor: vars.colors.primary,
-  color: vars.colors.onPrimary,
-  borderRadius: vars.radii[2],
-  fontSize: vars.fontSizes[1],
-});
-
 export const closeButton = style({
   position: "absolute",
   top: 0,

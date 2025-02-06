@@ -4,17 +4,23 @@ import Button from "../Button/Button";
 const TransferButtons = () => {
   return (
     <div className={styles.saveBar}>
-      <Button className={styles.primaryButton} transfer>
+      <Button variant="primary" transfer>
         Auto Pick
       </Button>
-      <Button className={styles.secondaryButton} transfer>
+      <Button variant="secondary" transfer>
         Reset
       </Button>
-      <Button className={styles.tertiaryButton} transfer>
+      <Button variant="tertiary" transfer>
         Make Transfers
       </Button>
-      <Button className={styles.primaryButton} fullWidth transfer>
+      <Button variant="primary" fullWidth transfer>
         Auto Pick (with optional fullWidth prop)
+      </Button>
+      <Button variant="filled" transfer>
+        Filled
+      </Button>
+      <Button variant="ghost" transfer>
+        Ghost
       </Button>
     </div>
   );
