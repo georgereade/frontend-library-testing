@@ -40,6 +40,13 @@ export const button = recipe({
         color: vars.colors.bgColor,
         borderRadius: vars.radii[4],
         padding: vars.space[2],
+        border: `1px solid ${vars.colors.primary}`,
+        selectors: {
+          "&[data-hovered]": {
+            background: vars.colors.bgColor,
+            color: vars.colors.primary,
+          },
+        },
       },
       ghost: {
         background: vars.colors.bgColor,
@@ -47,6 +54,12 @@ export const button = recipe({
         borderRadius: vars.radii[4],
         padding: vars.space[2],
         border: `1px solid ${vars.colors.primary}`,
+        selectors: {
+          "&[data-hovered]": {
+            background: vars.colors.primary,
+            color: vars.colors.bgColor,
+          },
+        },
       },
     },
     transfer: {
