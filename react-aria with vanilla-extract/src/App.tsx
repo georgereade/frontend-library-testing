@@ -4,8 +4,6 @@ import ThemeDropdown from "./components/ThemeDropdown/ThemeDropdown.tsx";
 import TransferButtons from "./components/TransferButtons/TransferButtons.tsx";
 import PlayerInfoModal from "./components/PlayerInfoModal/PlayerInfoModal.tsx";
 import AlertDemos from "./components/AlertDemos/AlertDemos.tsx";
-// import PositionSelector from "./components/PositionSelector/PositionSelector.tsx";
-// import PlayerTable from "./components/PlayerTable/PlayerTable.tsx";
 import PlayerPage from "./components/Players/Players.tsx";
 
 function App() {

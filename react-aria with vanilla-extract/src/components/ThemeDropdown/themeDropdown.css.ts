@@ -99,5 +99,5 @@ globalStyle(
   {
     background: vars.colors.primary,
     color: vars.colors.onPrimary,
-  }
+  },
 );
