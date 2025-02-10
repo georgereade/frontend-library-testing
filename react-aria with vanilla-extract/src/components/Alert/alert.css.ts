@@ -1,20 +1,23 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { style, createVar } from "@vanilla-extract/css";
 import { vars } from "../../theme.css.ts";
+import { sprinkles } from "../../sprinkles.css.ts";
+// import { rainbowSprinkles } from "../../sprinkles.css.ts";
 
 // AlertWrap
-export const alertWrap = style({
-  margin: vars.space[2],
-  textAlign: "center",
-
-  "@media": {
-    // [`screen and (min-width: ${vars.breakpoints[3]})`]: {
-    [`screen and (min-width: 990px)`]: {
-      marginRight: 0,
-      marginLeft: 0,
-    },
+export const alertWrap = style([
+  {
+    marginTop: vars.space[2],
+    marginBottom: vars.space[2],
+    textAlign: "center",
   },
-});
+  sprinkles({
+    margin: {
+      mobile: vars.space[2],
+      tablet: `${vars.space[2]} 0`,
+    },
+  }),
+]);
 
 export const bgColor = createVar();
 export const textColor = createVar();

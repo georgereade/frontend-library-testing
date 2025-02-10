@@ -1,5 +1,6 @@
 import { globalStyle, style } from "@vanilla-extract/css";
 import { vars } from "./theme.css.ts";
+import { sprinkles } from "./sprinkles.css.ts";
 
 globalStyle(":root", {
   fontSynthesis: "none",
@@ -41,14 +42,12 @@ export const appRow = style({
   padding: `${vars.space[3]} 0`,
 });
 
-export const appColumn = style({
-  display: "flex",
-  flexDirection: "column",
-  flex: "0 1 40%",
-
-  "@media": {
-    [`screen and (max-width: 768px)`]: {
-      flexBasis: "90%",
+export const appColumn = style([
+  { display: "flex", flexDirection: "column", flexGrow: "0", flexShrink: "1" },
+  sprinkles({
+    flexBasis: {
+      mobile: "90%",
+      desktop: "40%",
     },
-  },
-});
+  }),
+]);
