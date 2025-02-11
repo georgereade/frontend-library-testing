@@ -53,56 +53,11 @@ export const overlay = style({
   },
 });
 
-// Modal Styles
-// export const modal = style([
-//   {
-//     position: "fixed",
-//     top: 0,
-//     bottom: 0,
-//     right: 0,
-//     width: "95vw",
-//     marginTop: "40%",
-//     backgroundColor: vars.colors.bgColor,
-//     color: vars.colors.onPrimaryContainer,
-//     borderTop: `1px ${vars.colors.primary} solid`,
-//     padding: "8px",
-//     borderRadius: vars.radii[2],
-//     selectors: {
-//       "&[data-entering]": {
-//         animation: `${modalSlideBottom} 200ms`,
-//       },
-//       "&[data-exiting]": {
-//         animation: `${modalSlideBottom} 200ms reverse ease-in`,
-//       },
-//     },
-//     "@media": {
-//       [`screen and (min-width: 768px)`]: {
-//         width: "300px",
-//         height: "90vh",
-//         margin: "auto",
-//         marginRight: "1%",
-//         borderLeft: `1px ${vars.colors.primary} solid`,
-//         selectors: {
-//           "&[data-entering]": {
-//             animation: `${modalSlideRight} 200ms`,
-//           },
-//           "&[data-exiting]": {
-//             animation: `${modalSlideRight} 200ms reverse ease-in`,
-//           },
-//         },
-//       },
-//     },
-//   },
-// ]);
-
 export const modal = style([
   {
     position: "fixed",
-    top: 0,
-    bottom: 0,
     right: 0,
-    width: "95vw",
-    marginTop: "40%",
+    top: 0,
     backgroundColor: vars.colors.bgColor,
     color: vars.colors.onPrimaryContainer,
     borderTop: `1px ${vars.colors.primary} solid`,
@@ -116,6 +71,7 @@ export const modal = style([
         animation: `${modalSlideBottom} 200ms reverse ease-in`,
       },
     },
+    // need to set width manually as can't use sprinkles with selectors
     "@media": {
       [`screen and (min-width: 768px)`]: {
         selectors: {
@@ -130,11 +86,17 @@ export const modal = style([
     },
   },
   sprinkles({
-    width: { tablet: "300px" },
-    height: { tablet: "90vh" },
-    margin: { tablet: "auto" },
-    marginRight: { tablet: "1%" },
-    borderLeft: { tablet: `1px ${vars.colors.primary} solid` },
+    width: { mobile: "95vw", tablet: "300px", desktop: "300px" },
+    top: { mobile: "0", tablet: "auto" },
+    bottom: { mobile: "0", tablet: "0" },
+    height: { tablet: "90vh", desktop: "90vh" },
+    margin: { tablet: "auto", desktop: "auto" },
+    marginRight: { tablet: "1%", desktop: "1%" },
+    marginTop: { mobile: "25%", tablet: "auto" },
+    borderLeft: {
+      tablet: `1px ${vars.colors.primary} solid`,
+      desktop: `1px ${vars.colors.primary} solid`,
+    },
   }),
 ]);
 

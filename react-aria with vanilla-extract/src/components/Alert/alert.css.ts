@@ -2,7 +2,6 @@ import { recipe } from "@vanilla-extract/recipes";
 import { style, createVar } from "@vanilla-extract/css";
 import { vars } from "../../theme.css.ts";
 import { sprinkles } from "../../sprinkles.css.ts";
-// import { rainbowSprinkles } from "../../sprinkles.css.ts";
 
 // AlertWrap
 export const alertWrap = style([
