@@ -8,6 +8,7 @@ import {
 import * as styles from "./modal.css.ts";
 import Button from "../Button/Button.tsx";
 import { useRef } from "react";
+import { XCircle } from "lucide-react";
 
 const PlayerInfoModal = () => {
   const ref = useRef();
@@ -23,6 +24,9 @@ const PlayerInfoModal = () => {
             ref={ref}
             unstable_initialFocusRef={ref}
           >
+            <Button slot="close" className={styles.closeButton}>
+              <XCircle />
+            </Button>
             <Heading slot="title">Player Info</Heading>
             <p>
               This is a modal for showing player info and managing your team.

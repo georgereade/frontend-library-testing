@@ -119,6 +119,8 @@ export const closeButton = style({
   borderRadius: vars.radii[1],
   padding: "2px",
   margin: "2px",
+  background: vars.colors.bgColor,
+  color: vars.colors.primary,
 });
 
 export const buttonRow = style({
