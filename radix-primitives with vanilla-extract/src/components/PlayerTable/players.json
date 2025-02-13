@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "name": "Palmer",
+    "team": "Chelsea",
+    "position": "Midfielder",
+    "price": 11
+  },
+  {
+    "id": 2,
+    "name": "Salah",
+    "team": "Liverpool",
+    "position": "Midfielder",
+    "price": 13.0
+  },
+  {
+    "id": 3,
+    "name": "Saka",
+    "team": "Arsenal",
+    "position": "Midfielder",
+    "price": 9.0
+  },
+  {
+    "id": 4,
+    "name": "Haaland",
+    "team": "Man City",
+    "position": "Forward",
+    "price": 14.0
+  },
+  {
+    "id": 5,
+    "name": "De Bruyne",
+    "team": "Man City",
+    "position": "Midfielder",
+    "price": 10.9
+  },
+  {
+    "id": 6,
+    "name": "Son",
+    "team": "Spurs",
+    "position": "Midfielder",
+    "price": 9.7
+  },
+  {
+    "id": 7,
+    "name": "Trippier",
+    "team": "Newcastle",
+    "position": "Defender",
+    "price": 6.8
+  },
+  {
+    "id": 8,
+    "name": "Watkins",
+    "team": "Aston Villa",
+    "position": "Forward",
+    "price": 8.7
+  },
+  {
+    "id": 9,
+    "name": "Maddison",
+    "team": "Spurs",
+    "position": "Midfielder",
+    "price": 7.9
+  },
+  {
+    "id": 10,
+    "name": "Fernandes",
+    "team": "Man Utd",
+    "position": "Midfielder",
+    "price": 8.4
+  },
+  {
+    "id": 11,
+    "name": "Gabriel",
+    "team": "Arsenal",
+    "position": "Defender",
+    "price": 5.2
+  },
+  {
+    "id": 12,
+    "name": "Alexander-Arnold",
+    "team": "Liverpool",
+    "position": "Defender",
+    "price": 7.8
+  },
+  {
+    "id": 13,
+    "name": "Declan Rice",
+    "team": "Arsenal",
+    "position": "Midfielder",
+    "price": 5.4
+  },
+  {
+    "id": 14,
+    "name": "João Pedro",
+    "team": "Brighton",
+    "position": "Forward",
+    "price": 5.4
+  },
+  {
+    "id": 15,
+    "name": "Isak",
+    "team": "Newcastle",
+    "position": "Forward",
+    "price": 7.6
+  },
+  {
+    "id": 16,
+    "name": "Alisson",
+    "team": "Liverpool",
+    "position": "Goalkeeper",
+    "price": 5.5
+  },
+  {
+    "id": 17,
+    "name": "Martínez",
+    "team": "Aston Villa",
+    "position": "Goalkeeper",
+    "price": 5.2
+  },
+  {
+    "id": 18,
+    "name": "Porro",
+    "team": "Spurs",
+    "position": "Defender",
+    "price": 5.6
+  },
+  {
+    "id": 19,
+    "name": "Saliba",
+    "team": "Arsenal",
+    "position": "Defender",
+    "price": 5.6
+  },
+  {
+    "id": 20,
+    "name": "Szoboszlai",
+    "team": "Liverpool",
+    "position": "Midfielder",
+    "price": 7.2
+  },
+  {
+    "id": 21,
+    "name": "Arteta",
+    "team": "Arsenal",
+    "position": "Manager",
+    "price": 1.5
+  },
+  {
+    "id": 22,
+    "name": "van Nistelrooy",
+    "team": "Leicester",
+    "position": "Manager",
+    "price": 0.5
+  }
+]

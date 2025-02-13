@@ -1,0 +1,7 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "overrides": [
+    { "files": ["**/*.css.ts"], "customSyntax": "@stylelint/postcss-css-in-js" }
+  ],
+  "rules": { "block-no-empty": true, "color-no-invalid-hex": true }
+}
